@@ -8,6 +8,10 @@ body {
   background: #ecf0f1;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .wrapper {
   margin: 0 auto;
   width: 300px;
