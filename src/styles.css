@@ -29,13 +29,13 @@ h1 {
   height: 600px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position-y: -180px;
+  background-position-y: -190px;
   background-image: url("https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
 }
 
 .description {
-  padding: 20px;
-  height: 250px;
+  height: 300px;
+  padding: 0 20px 20px 20px;
 }
 
 .text {
@@ -44,9 +44,15 @@ h1 {
 }
 
 .progress-bar-container {
-  margin-top: 20px;
-  padding: 20px;
-  height: 60px;
+  padding: 0 20px 0 20px;
+  height: 80px;
+}
+
+.progress-bar-container .top-stats {
+  margin-bottom: 5px;
+}
+.progress-bar-container .bottom-stats {
+  margin-top: 5px;
 }
 
 .progress-bar {
