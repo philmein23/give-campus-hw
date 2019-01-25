@@ -6,7 +6,6 @@ export async function getDonors() {
   let donors = JSON.parse(data);
 
   let topTen = getTop10(donors);
-  console.log(topTen);
   return topTen;
 }
 
