@@ -21,7 +21,15 @@ body {
 
 h1 {
   font-size: 28px;
-  margin: 10px 0;
+  margin: 5px 0;
+  letter-spacing: 1.5px;
+}
+
+.subtext {
+  font-size: 13px;
+  color: grey;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .front-card-container {
@@ -39,14 +47,33 @@ h1 {
 }
 
 .back-card-container {
+  display: flex;
+  flex-direction: column;
   width: 300px;
   height: 600px;
   background: white;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-
+  padding: 15px;
   position: absolute;
   /* top: 0;
   left: 0; */
+}
+
+.top-10 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.column-header > div {
+  font-weight: 600;
+}
+
+.donor-data > div {
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .description {

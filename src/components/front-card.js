@@ -6,7 +6,7 @@ export default function FrontCard() {
     <div className="front-card-container">
       <div className="description">
         <h1>Oxford Giving Day</h1>
-        <div className="title-subtext">For Oxford Giving Day</div>
+        <div className="subtext">For Oxford Giving Day</div>
         <div className="text">
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

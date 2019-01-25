@@ -6,8 +6,12 @@ class BackCard extends Component {
     let { donors } = this.props;
     return (
       <div className="back-card-container">
+        <div className="top-10">
+          <h1>Top 10 Donors</h1>
+          <div className="subtext">Oxford Giving Day 2018</div>
+        </div>
         <div className="table-grid">
-          <div className="item-row">
+          <div className="column-header item-row">
             <div className="column-1">Name</div>
             <div className="column-1">Class Year</div>
             <div className="column-1">Amount</div>
@@ -17,7 +21,7 @@ class BackCard extends Component {
           ) : (
             donors.length &&
             donors.map(donor => (
-              <div className="item-row">
+              <div className="donor-data item-row">
                 <div className="column-1">{donor.name}</div>
                 <div className="column-1">{donor.class_year}</div>
                 <div className="column-1">{donor.amount}</div>
