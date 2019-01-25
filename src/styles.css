@@ -191,4 +191,16 @@ h1 {
 
 .total-donations {
   font-size: 25px;
+  letter-spacing: 1.5px;
+}
+
+.return {
+  margin-top: 10px;
+  border: none;
+  background: 0 0;
+  cursor: pointer;
+}
+
+.return:hover {
+  text-decoration: underline;
 }

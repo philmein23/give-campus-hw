@@ -21,16 +21,20 @@ const BackCard = React.forwardRef(
             donors.length &&
             donors.map(donor => (
               <div className="donor-data item-row">
-                <div className="column-1">{donor.name}</div>
+                <div className="column-1" style={{ "margin-right": "3px" }}>
+                  {donor.name}
+                </div>
                 <div className="column-1">{donor.class_year}</div>
-                <div className="column-1">{donor.amount}</div>
+                <div className="column-1">${donor.amount}</div>
               </div>
             ))
           )}
         </div>
         <div className="back-card-footer">
           <div className="total-donations">${totalDonations}</div>
-          <button onClick={navigate("front")}>Return to front</button>
+          <button className="return" onClick={navigate("front")}>
+            Return to front
+          </button>
         </div>
       </div>
     );
