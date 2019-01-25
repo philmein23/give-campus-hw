@@ -8,6 +8,12 @@ body {
   background: #ecf0f1;
 }
 
+.wrapper {
+  margin: 0 auto;
+  width: 300px;
+  position: relative;
+}
+
 .main-image {
   height: 100%;
   background-position: center;
@@ -18,9 +24,8 @@ h1 {
   margin: 10px 0;
 }
 
-.card-container {
+.front-card-container {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -31,6 +36,15 @@ h1 {
   background-repeat: no-repeat;
   background-position-y: -190px;
   background-image: url("https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+}
+
+.back-card-container {
+  width: 300px;
+  height: 600px;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .description {
@@ -77,4 +91,23 @@ h1 {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.table-grid {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+}
+
+.item-row {
+  display: flex;
+  width: 100%;
+}
+
+.column-1 {
+  flex: 1;
+}
+
+.column-2 {
+  flex: 2;
 }
