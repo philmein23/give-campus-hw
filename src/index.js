@@ -17,6 +17,7 @@ class App extends Component {
 
   navigate = where => e => {
     e.preventDefault();
+    let back = this.back.classList;
 
     if (where === "front") {
       console.log("front");
@@ -24,6 +25,7 @@ class App extends Component {
 
     if (where === "back") {
       console.log("back");
+      back.toggle("animate");
     }
   };
 
