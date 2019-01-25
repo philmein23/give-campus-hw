@@ -19,9 +19,9 @@ const BackCard = React.forwardRef(
             <div>Loading...</div>
           ) : (
             donors.length &&
-            donors.map(donor => (
-              <div className="donor-data item-row">
-                <div className="column-1" style={{ "margin-right": "3px" }}>
+            donors.map((donor, index) => (
+              <div key={index} className="donor-data item-row">
+                <div className="column-1" style={{ marginRight: "3px" }}>
                   {donor.name}
                 </div>
                 <div className="column-1">{donor.class_year}</div>
