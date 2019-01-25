@@ -3,11 +3,13 @@ import ReactDOM from "react-dom";
 import Description from "./description";
 import ProgressBar from "./progress-bar";
 
-export default function FrontCard() {
+const FrontCard = React.forwardRef(({ navigate }, ref) => {
   return (
-    <div className="front-card-container">
+    <div ref={ref} className="front-card-container" onClick={navigate("back")}>
       <Description />
       <ProgressBar />
     </div>
   );
-}
+});
+
+export default FrontCard;

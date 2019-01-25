@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 
 class BackCard extends Component {
   render() {
-    let { donors, totalDonations } = this.props;
+    let { donors, totalDonations, navigate, innerRef } = this.props;
     return (
-      <div className="back-card-container">
+      <div ref={innerRef} className="back-card-container">
         <div className="top-10">
           <h1>Top 10 Donors</h1>
           <div className="subtext">Oxford Giving Day 2018</div>
@@ -31,6 +31,7 @@ class BackCard extends Component {
         </div>
         <div className="back-card-footer">
           <div className="total-donations">${totalDonations}</div>
+          <button onClick={navigate("front")}>Return to front</button>
         </div>
       </div>
     );
