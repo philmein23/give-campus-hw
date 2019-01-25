@@ -1,11 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 
-class BackCard extends Component {
-  render() {
-    let { donors, totalDonations, navigate, innerRef } = this.props;
+const BackCard = React.forwardRef(
+  ({ donors, totalDonations, navigate }, ref) => {
     return (
-      <div ref={innerRef} className="back-card-container">
+      <div ref={ref} className="back-card-container">
         <div className="top-10">
           <h1>Top 10 Donors</h1>
           <div className="subtext">Oxford Giving Day 2018</div>
@@ -36,6 +35,6 @@ class BackCard extends Component {
       </div>
     );
   }
-}
+);
 
 export default BackCard;

@@ -13,26 +13,25 @@ class App extends Component {
   };
 
   front = React.createRef();
-  back = null;
+  back = React.createRef();
 
   navigate = where => e => {
     e.preventDefault();
-    let back = this.back.classList;
+    let back = this.back.current.classList;
+    let front = this.front.current.classList;
 
     if (where === "front") {
-      console.log("front");
+      back.toggle("animate");
+      front.toggle("animate");
     }
 
     if (where === "back") {
-      console.log("back");
+      front.toggle("animate");
       back.toggle("animate");
     }
   };
 
   componentDidMount() {
-    console.log("refdfdf", this.front);
-    console.log("back card", this.back);
-
     return getDonors().then(donors => {
       this.setState(() => ({
         donors,
@@ -42,17 +41,18 @@ class App extends Component {
   }
 
   render() {
-    console.log("thdfsdf", this.front);
     let { donors, totalDonations } = this.state;
     return (
       <div className="wrapper">
-        <FrontCard ref={this.front} navigate={this.navigate} />
-        <BackCard
-          innerRef={el => (this.back = el)}
-          navigate={this.navigate}
-          donors={donors}
-          totalDonations={totalDonations}
-        />
+        <div className="cards">
+          <FrontCard ref={this.front} navigate={this.navigate} />
+          <BackCard
+            ref={this.back}
+            navigate={this.navigate}
+            donors={donors}
+            totalDonations={totalDonations}
+          />
+        </div>
       </div>
     );
   }
