@@ -10,6 +10,12 @@ export async function getDonors() {
   return topTen;
 }
 
+export function getTotalDonation(donors) {
+  return donors.reduce((accum, donor) => {
+    return accum + donor.amount;
+  }, 0);
+}
+
 function getTop10(donors) {
   donors.sort((a, b) => {
     if (b.amount < a.amount) {

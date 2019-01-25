@@ -71,13 +71,26 @@ h1 {
   margin-bottom: 20px;
 }
 
+.column-header {
+  margin-bottom: 10px;
+}
+
 .column-header > div {
   font-weight: 600;
 }
 
+.column-header,
+.donor-data {
+  padding-left: 8px;
+}
+
+.donor-data:nth-child(2n) {
+  background-color: #ecf0f1;
+}
+
 .donor-data > div {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin: 5px 0;
 }
 
 .description {
@@ -143,4 +156,13 @@ h1 {
 
 .column-2 {
   flex: 2;
+}
+
+.back-card-footer {
+  margin-top: 35px;
+}
+
+.total-donations {
+  font-size: 25px;
+  text-align: center;
 }

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 class BackCard extends Component {
   render() {
-    let { donors } = this.props;
+    let { donors, totalDonations } = this.props;
     return (
       <div className="back-card-container">
         <div className="top-10">
@@ -28,6 +28,9 @@ class BackCard extends Component {
               </div>
             ))
           )}
+        </div>
+        <div className="back-card-footer">
+          <div className="total-donations">${totalDonations}</div>
         </div>
       </div>
     );
